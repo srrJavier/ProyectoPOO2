@@ -210,7 +210,7 @@ public class VehiculoView extends Application {
 
         tabPane.getTabs().addAll(tabRegistro, tabResumen);
 
-        Scene scene = new Scene(tabPane, 450, 200);
+        Scene scene = new Scene(tabPane, 450, 600);
 
         stage.setScene(scene);
         stage.setTitle("Facturación Taller Mecánico");
