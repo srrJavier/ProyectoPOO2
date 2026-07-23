@@ -1,34 +1,24 @@
 package org.javiersian.model;
 
 public abstract class Vehiculo {
-    private String id;
-    private String nombre;
-    
-    public Vehiculo(){
-        
-    }
-    
-    public Vehiculo(String id, String nombre){
-        this.id = id;
-        this.nombre = nombre;
+   private String descripcion;
+
+    public Vehiculo(String descripcion) {
+        this.descripcion = descripcion;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public String getDescripcion() {
+        return descripcion;
     }
-    public String getId() {
-        return id;
-    }
-   
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
-     public String getNombre() {
-        return nombre;
-    }
-    
 
-     public abstract double calcularTotal();
-     
+    public abstract double facturar();
+
+    @Override
+    public String toString() {
+        return descripcion + " - Q" + String.format("%.2f", facturar());
+    }
 }

@@ -1,32 +1,29 @@
 package org.javiersian.model;
 
-public class VehiculoLavado extends Vehiculo{
-    
-    private double salarioMensual;
-    
-    public VehiculoLavado(){
-        
+public class VehiculoLavado extends Vehiculo {
+
+    private String tipoVehiculo;
+
+    public VehiculoLavado(String descripcion, String tipoVehiculo) {
+        super(descripcion);
+        this.tipoVehiculo = tipoVehiculo;
     }
-    
-    public VehiculoLavado(String id, String nombre, double salarioMensual){
-        super(id,nombre);
-        this.salarioMensual = salarioMensual;
+
+    public String getTipoVehiculo() {
+        return tipoVehiculo;
     }
-    
-    public void setSalarioMensual(double salarioMensual){
-        //acceder al atributo de clase y asignar  el parametro del metodo
-        //validaciones -
-        this.salarioMensual = salarioMensual;
+
+    public void setTipoVehiculo(String tipoVehiculo) {
+        this.tipoVehiculo = tipoVehiculo;
     }
-    
-    public double getSalarioMensual(){
-       //atributos de clase
-       return this.salarioMensual;
-    }
-    
+
     @Override
-    public double calcularTotal() {
-       return this.salarioMensual;
+    public double facturar() {
+        if (tipoVehiculo.equalsIgnoreCase("Grande") || tipoVehiculo.equalsIgnoreCase("SUV")) {
+            return 100.0;
+        } else if (tipoVehiculo.equalsIgnoreCase("Mediano")) {
+            return 75.0;
+        }
+        return 50.0;
     }
 }
-
