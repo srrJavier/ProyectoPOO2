@@ -175,7 +175,7 @@ public class VehiculoView extends Application {
                             break;
                     }
                     
-                    controller.agregarVehiculo(Vehiculo);
+                    controller.agregarVehiculo(vehiculo);
                     
                     listView.setItems(
                             FXCollections.observableArrayList(
@@ -210,7 +210,7 @@ public class VehiculoView extends Application {
 
         tabPane.getTabs().addAll(tabRegistro, tabResumen);
 
-        Scene scene = new Scene(tabPane, 600, 450);
+        Scene scene = new Scene(tabPane, 450, 200);
 
         stage.setScene(scene);
         stage.setTitle("Facturación Taller Mecánico");

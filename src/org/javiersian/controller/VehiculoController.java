@@ -7,11 +7,11 @@ import org.javiersian.model.Vehiculo;
 public class VehiculoController {
   private ArrayList<Vehiculo> listaServicios;
     
-    public void agregarServicio(Vehiculo vehiculo) {
+    public void agregarVehiculo(Vehiculo vehiculo) {
         listaServicios.add(vehiculo);
     }
 
-    public ArrayList<Vehiculo> getListaServicios() {
+    public ArrayList<Vehiculo> getListaVehiculo() {
         return listaServicios;
     }
 
